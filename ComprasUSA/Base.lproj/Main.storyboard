@@ -67,6 +67,7 @@
                                                     <rect key="frame" x="313" y="12" width="42" height="21"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="42" id="2Ob-jc-uqJ"/>
+                                                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="42" id="w8t-6j-Bgh"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
@@ -361,7 +362,7 @@
                     <connections>
                         <outlet property="btAddFoto" destination="vY5-9B-wgF" id="Gg7-22-lw1"/>
                         <outlet property="btCadastrar" destination="02Q-s6-vzP" id="v8q-Bd-eFO"/>
-                        <outlet property="imgProduto" destination="qp9-c5-uCf" id="3v9-Lo-O9r"/>
+                        <outlet property="imgProduto" destination="qp9-c5-uCf" id="a4G-HQ-Ok2"/>
                         <outlet property="swtCartao" destination="ckN-FT-cYG" id="Gw5-3m-FxX"/>
                         <outlet property="txtEstado" destination="iXC-Zh-qSk" id="MHc-Lr-nXJ"/>
                         <outlet property="txtNomeProduto" destination="3XJ-Qx-SlT" id="e2Q-6I-vry"/>
