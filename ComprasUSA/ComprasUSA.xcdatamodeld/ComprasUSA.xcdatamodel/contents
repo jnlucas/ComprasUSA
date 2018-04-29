@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="14133" systemVersion="17E199" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
     <entity name="Compra" representedClassName="Compra" syncable="YES" codeGenerationType="class">
-        <attribute name="cartao" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="cartao" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="imagem" optional="YES" attributeType="Transformable" syncable="YES"/>
         <attribute name="nome" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="preco" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
-        <relationship name="relationship" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Estado" inverseName="relationship" inverseEntity="Estado" syncable="YES"/>
+        <relationship name="estado" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Estado" syncable="YES"/>
     </entity>
     <entity name="Estado" representedClassName="Estado" syncable="YES" codeGenerationType="class">
         <attribute name="imposto" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="nome" optional="YES" attributeType="String" syncable="YES"/>
-        <relationship name="relationship" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Compra" inverseName="relationship" inverseEntity="Compra" syncable="YES"/>
+        <relationship name="compras" toMany="YES" deletionRule="Deny" destinationEntity="Compra" syncable="YES"/>
     </entity>
     <elements>
-        <element name="Compra" positionX="-63" positionY="-18" width="128" height="118"/>
-        <element name="Estado" positionX="187" positionY="-21" width="128" height="88"/>
+        <element name="Compra" positionX="9" positionY="86" width="128" height="118"/>
+        <element name="Estado" positionX="214" positionY="-88" width="128" height="88"/>
     </elements>
 </model>

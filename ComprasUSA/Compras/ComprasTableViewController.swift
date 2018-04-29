@@ -7,32 +7,95 @@
 //
 
 import UIKit
+import CoreData
+
 
 class ComprasTableViewController: UITableViewController {
 
-    @IBOutlet weak var lbCompras: UILabel!
+    
+    //var label = UILabel(frame: CGRect(x: 0, y: 0, width: 200, height: 22))
+    var fetchedResultController: NSFetchedResultsController<Compra>!
+    var label = UILabel(frame: CGRect(x: 0, y: 0, width: 200, height: 22))
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        lbCompras.text = "Sem compras"
+        tableView.estimatedRowHeight = 106
+        tableView.rowHeight = UITableViewAutomaticDimension
+        label.text = "Sua lista está vazia!"
+        label.textAlignment = .center
+        label.textColor = .black
+        
+        loadCompras()
         
     }
-
     
-
-    // MARK: - Table view data source
-
+    
+    
+    
+    func loadCompras() {
+        let fetchRequest: NSFetchRequest<Compra> = Compra.fetchRequest()
+        let sortDescriptor = NSSortDescriptor(key: "nome", ascending: true)
+        fetchRequest.sortDescriptors = [sortDescriptor]
+        fetchedResultController = NSFetchedResultsController(fetchRequest: fetchRequest, managedObjectContext: context, sectionNameKeyPath: nil, cacheName: nil)
+        fetchedResultController.delegate = self
+        do {
+            try fetchedResultController.performFetch()
+        } catch {
+            print(error.localizedDescription)
+        }
+    }
+    
     override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 1
     }
-
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        return 0
-    }
-
     
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        if let count = fetchedResultController.fetchedObjects?.count {
+            tableView.backgroundView = (count == 0) ? label : nil
+            return count
+        } else {
+            tableView.backgroundView = label
+            return 0
+        }
+    }
+    
+    //Método que define a célula que será apresentada em cada linha
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "compraCell", for: indexPath) as! ComprasTableViewCell
+        let compra = fetchedResultController.object(at: indexPath)
+        cell.lbNome.text = compra.nome
+        cell.lbPreco.text = "\(compra.preco)"
+        
+        print("preco >>>> \(compra.preco)")
+        if let image = compra.imagem as? UIImage {
+            cell.ivImage.image = image
+        } else {
+            cell.ivImage.image = nil
+        }
+        return cell
+    }
+    
+    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+            let compra = fetchedResultController.object(at: indexPath)
+            context.delete(compra)
+            do {
+                try context.save()
+            } catch {
+                print(error.localizedDescription)
+            }
+        }
+    }
+    
+    
+}
 
+
+// MARK: - NSFetchedResultsControllerDelegate
+extension ComprasTableViewController: NSFetchedResultsControllerDelegate {
+    func controllerDidChangeContent(_ controller: NSFetchedResultsController<NSFetchRequestResult>) {
+        tableView.reloadData()
+    }
 }

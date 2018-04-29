@@ -10,6 +10,7 @@
 		6073F28E2094EB3100FB2793 /* ComprasTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6073F28D2094EB3100FB2793 /* ComprasTableViewController.swift */; };
 		6073F2912094F24500FB2793 /* AjustesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6073F2902094F24500FB2793 /* AjustesTableViewCell.swift */; };
 		6073F2932094FB4300FB2793 /* UIViewController+CoreData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6073F2922094FB4300FB2793 /* UIViewController+CoreData.swift */; };
+		6073F2962096526300FB2793 /* ComprasTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6073F2952096526300FB2793 /* ComprasTableViewCell.swift */; };
 		AC77F866208E96F400A419D7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC77F865208E96F400A419D7 /* AppDelegate.swift */; };
 		AC77F868208E96F400A419D7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC77F867208E96F400A419D7 /* ViewController.swift */; };
 		AC77F86B208E96F400A419D7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC77F869208E96F400A419D7 /* Main.storyboard */; };
@@ -25,6 +26,7 @@
 		6073F28D2094EB3100FB2793 /* ComprasTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComprasTableViewController.swift; sourceTree = "<group>"; };
 		6073F2902094F24500FB2793 /* AjustesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AjustesTableViewCell.swift; sourceTree = "<group>"; };
 		6073F2922094FB4300FB2793 /* UIViewController+CoreData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+CoreData.swift"; sourceTree = "<group>"; };
+		6073F2952096526300FB2793 /* ComprasTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComprasTableViewCell.swift; sourceTree = "<group>"; };
 		AC77F862208E96F400A419D7 /* ComprasUSA.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ComprasUSA.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC77F865208E96F400A419D7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AC77F867208E96F400A419D7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -63,6 +65,7 @@
 			children = (
 				6073F28D2094EB3100FB2793 /* ComprasTableViewController.swift */,
 				AC77F87A208EBCBF00A419D7 /* CadastrarViewController.swift */,
+				6073F2952096526300FB2793 /* ComprasTableViewCell.swift */,
 			);
 			path = Compras;
 			sourceTree = "<group>";
@@ -178,6 +181,7 @@
 				AC77F868208E96F400A419D7 /* ViewController.swift in Sources */,
 				6073F2932094FB4300FB2793 /* UIViewController+CoreData.swift in Sources */,
 				6073F28E2094EB3100FB2793 /* ComprasTableViewController.swift in Sources */,
+				6073F2962096526300FB2793 /* ComprasTableViewCell.swift in Sources */,
 				AC77F86E208E96F400A419D7 /* ComprasUSA.xcdatamodeld in Sources */,
 				AC77F866208E96F400A419D7 /* AppDelegate.swift in Sources */,
 				AC77F87F208EBDF700A419D7 /* TotalViewController.swift in Sources */,
