@@ -7,15 +7,24 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6073F28E2094EB3100FB2793 /* ComprasTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6073F28D2094EB3100FB2793 /* ComprasTableViewController.swift */; };
+		6073F2912094F24500FB2793 /* AjustesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6073F2902094F24500FB2793 /* AjustesTableViewCell.swift */; };
+		6073F2932094FB4300FB2793 /* UIViewController+CoreData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6073F2922094FB4300FB2793 /* UIViewController+CoreData.swift */; };
 		AC77F866208E96F400A419D7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC77F865208E96F400A419D7 /* AppDelegate.swift */; };
 		AC77F868208E96F400A419D7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC77F867208E96F400A419D7 /* ViewController.swift */; };
 		AC77F86B208E96F400A419D7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC77F869208E96F400A419D7 /* Main.storyboard */; };
 		AC77F86E208E96F400A419D7 /* ComprasUSA.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = AC77F86C208E96F400A419D7 /* ComprasUSA.xcdatamodeld */; };
 		AC77F870208E96F400A419D7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AC77F86F208E96F400A419D7 /* Assets.xcassets */; };
 		AC77F873208E96F400A419D7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC77F871208E96F400A419D7 /* LaunchScreen.storyboard */; };
+		AC77F87B208EBCBF00A419D7 /* CadastrarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC77F87A208EBCBF00A419D7 /* CadastrarViewController.swift */; };
+		AC77F87D208EBDB400A419D7 /* AjustesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC77F87C208EBDB400A419D7 /* AjustesViewController.swift */; };
+		AC77F87F208EBDF700A419D7 /* TotalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC77F87E208EBDF700A419D7 /* TotalViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		6073F28D2094EB3100FB2793 /* ComprasTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComprasTableViewController.swift; sourceTree = "<group>"; };
+		6073F2902094F24500FB2793 /* AjustesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AjustesTableViewCell.swift; sourceTree = "<group>"; };
+		6073F2922094FB4300FB2793 /* UIViewController+CoreData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+CoreData.swift"; sourceTree = "<group>"; };
 		AC77F862208E96F400A419D7 /* ComprasUSA.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ComprasUSA.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC77F865208E96F400A419D7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AC77F867208E96F400A419D7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -24,6 +33,9 @@
 		AC77F86F208E96F400A419D7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AC77F872208E96F400A419D7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AC77F874208E96F400A419D7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AC77F87A208EBCBF00A419D7 /* CadastrarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CadastrarViewController.swift; sourceTree = "<group>"; };
+		AC77F87C208EBDB400A419D7 /* AjustesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AjustesViewController.swift; sourceTree = "<group>"; };
+		AC77F87E208EBDF700A419D7 /* TotalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TotalViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -37,6 +49,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6073F28F2094F20000FB2793 /* Ajustes */ = {
+			isa = PBXGroup;
+			children = (
+				AC77F87C208EBDB400A419D7 /* AjustesViewController.swift */,
+				6073F2902094F24500FB2793 /* AjustesTableViewCell.swift */,
+			);
+			name = Ajustes;
+			sourceTree = "<group>";
+		};
+		6073F294209531D400FB2793 /* Compras */ = {
+			isa = PBXGroup;
+			children = (
+				6073F28D2094EB3100FB2793 /* ComprasTableViewController.swift */,
+				AC77F87A208EBCBF00A419D7 /* CadastrarViewController.swift */,
+			);
+			path = Compras;
+			sourceTree = "<group>";
+		};
 		AC77F859208E96F400A419D7 = {
 			isa = PBXGroup;
 			children = (
@@ -56,13 +86,17 @@
 		AC77F864208E96F400A419D7 /* ComprasUSA */ = {
 			isa = PBXGroup;
 			children = (
+				6073F294209531D400FB2793 /* Compras */,
+				6073F28F2094F20000FB2793 /* Ajustes */,
 				AC77F865208E96F400A419D7 /* AppDelegate.swift */,
 				AC77F867208E96F400A419D7 /* ViewController.swift */,
 				AC77F869208E96F400A419D7 /* Main.storyboard */,
+				AC77F87E208EBDF700A419D7 /* TotalViewController.swift */,
 				AC77F86F208E96F400A419D7 /* Assets.xcassets */,
 				AC77F871208E96F400A419D7 /* LaunchScreen.storyboard */,
 				AC77F874208E96F400A419D7 /* Info.plist */,
 				AC77F86C208E96F400A419D7 /* ComprasUSA.xcdatamodeld */,
+				6073F2922094FB4300FB2793 /* UIViewController+CoreData.swift */,
 			);
 			path = ComprasUSA;
 			sourceTree = "<group>";
@@ -94,7 +128,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0920;
-				LastUpgradeCheck = 0920;
+				LastUpgradeCheck = 0930;
 				ORGANIZATIONNAME = Philip;
 				TargetAttributes = {
 					AC77F861208E96F400A419D7 = {
@@ -139,9 +173,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AC77F87B208EBCBF00A419D7 /* CadastrarViewController.swift in Sources */,
+				AC77F87D208EBDB400A419D7 /* AjustesViewController.swift in Sources */,
 				AC77F868208E96F400A419D7 /* ViewController.swift in Sources */,
+				6073F2932094FB4300FB2793 /* UIViewController+CoreData.swift in Sources */,
+				6073F28E2094EB3100FB2793 /* ComprasTableViewController.swift in Sources */,
 				AC77F86E208E96F400A419D7 /* ComprasUSA.xcdatamodeld in Sources */,
 				AC77F866208E96F400A419D7 /* AppDelegate.swift in Sources */,
+				AC77F87F208EBDF700A419D7 /* TotalViewController.swift in Sources */,
+				6073F2912094F24500FB2793 /* AjustesTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -181,6 +221,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -188,6 +229,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -238,6 +280,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -245,6 +288,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
