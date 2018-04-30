@@ -85,9 +85,7 @@ class CadastrarViewController: UIViewController {
                 if !listEstados.contains(estado) {
                     listEstados.append(estado)
                 }
-                
-                
-                
+               
             }
         } catch {
             let fetchError = error as NSError
@@ -167,19 +165,21 @@ class CadastrarViewController: UIViewController {
             compra.preco = Double(txtValor.text!)!
             compra.cartao = swtCartao.isOn
             compra.estado = estadoSelecionado
+            
+            if smallImage != nil {
+                compra.imagem = smallImage
+            }
+            do {
+                try context.save()
+            } catch {
+                print(error.localizedDescription)
+            }
+            
+            
+            dismiss(animated: true)
         }
         
-        if smallImage != nil {
-            compra.imagem = smallImage
-        }
-        do {
-            try context.save()
-        } catch {
-            print(error.localizedDescription)
-        }
         
-        
-        dismiss(animated: true)
     }
    
 }

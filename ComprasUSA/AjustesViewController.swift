@@ -43,10 +43,6 @@ class AjustesViewController: UIViewController {
         dismiss(animated: true, completion: nil)
     }
     
-    
-
-    
-
 }
 // MARK: - NSFetchedResultsControllerDelegate
 extension AjustesViewController: NSFetchedResultsControllerDelegate {
@@ -89,11 +85,11 @@ extension AjustesViewController: UITableViewDelegate {
         do {
             let result = try self.context.fetch(fetchRequest)
             if result.count > 0 {
-                showError(text: "Existem compra(s) vinculadas ao estado")
+                showError(text: "Registro nao pode ser deletado")
                 return false
             }
         } catch {
-            showError(text: "Existem compra(s) vinculadas ao estado")
+            showError(text: "Registro nao pode ser deletado")
             return false
         }
         
@@ -185,6 +181,7 @@ extension AjustesViewController: UITableViewDelegate {
     }
     
     @objc func textChanged(_ sender: Any) {
+        
         let tf = sender as! UITextField
         var resp : UIResponder! = tf
         while !(resp is UIAlertController) { resp = resp.next }
