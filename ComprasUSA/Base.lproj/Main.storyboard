@@ -377,7 +377,6 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Compras" image="luggage" id="RWB-d0-p68"/>
                     <connections>
-                        <outlet property="btAddEstado" destination="KBA-wj-8Ho" id="6Qm-Fb-eY8"/>
                         <outlet property="btAddFoto" destination="vY5-9B-wgF" id="Gg7-22-lw1"/>
                         <outlet property="btCadastrar" destination="02Q-s6-vzP" id="v8q-Bd-eFO"/>
                         <outlet property="imgProduto" destination="qp9-c5-uCf" id="a4G-HQ-Ok2"/>
@@ -478,6 +477,6 @@
         <image name="suitcase" width="25" height="25"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="4WO-xt-ZIM"/>
+        <segue reference="SYB-fT-FCF"/>
     </inferredMetricsTieBreakers>
 </document>

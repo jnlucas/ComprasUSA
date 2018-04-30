@@ -30,11 +30,7 @@ class ComprasTableViewController: UITableViewController {
         
     }
     
-    
-    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        
-        print("cliquei no elemento")
         
         if let vc = segue.destination as? CadastrarViewController {
             if let index = tableView.indexPathForSelectedRow {

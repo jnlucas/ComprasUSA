@@ -80,8 +80,14 @@ class CadastrarViewController: UIViewController {
         do {
             let result = try self.context.fetch(fetchRequest)
             for element  in result {
+                
                 let estado = element as! Estado
-                listEstados.append(estado)
+                if !listEstados.contains(estado) {
+                    listEstados.append(estado)
+                }
+                
+                
+                
             }
         } catch {
             let fetchError = error as NSError
