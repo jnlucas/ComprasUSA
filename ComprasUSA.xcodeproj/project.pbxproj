@@ -70,6 +70,14 @@
 			path = Compras;
 			sourceTree = "<group>";
 		};
+		6073F299209699F600FB2793 /* Totalizador */ = {
+			isa = PBXGroup;
+			children = (
+				AC77F87E208EBDF700A419D7 /* TotalViewController.swift */,
+			);
+			name = Totalizador;
+			sourceTree = "<group>";
+		};
 		AC77F859208E96F400A419D7 = {
 			isa = PBXGroup;
 			children = (
@@ -89,12 +97,12 @@
 		AC77F864208E96F400A419D7 /* ComprasUSA */ = {
 			isa = PBXGroup;
 			children = (
+				6073F299209699F600FB2793 /* Totalizador */,
 				6073F294209531D400FB2793 /* Compras */,
 				6073F28F2094F20000FB2793 /* Ajustes */,
 				AC77F865208E96F400A419D7 /* AppDelegate.swift */,
 				AC77F867208E96F400A419D7 /* ViewController.swift */,
 				AC77F869208E96F400A419D7 /* Main.storyboard */,
-				AC77F87E208EBDF700A419D7 /* TotalViewController.swift */,
 				AC77F86F208E96F400A419D7 /* Assets.xcassets */,
 				AC77F871208E96F400A419D7 /* LaunchScreen.storyboard */,
 				AC77F874208E96F400A419D7 /* Info.plist */,

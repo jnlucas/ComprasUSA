@@ -11,6 +11,9 @@ import CoreData
 import UIKit
 
 extension UIViewController {
+    
+    //MARK: - ATRIBUTES
+    
     var appDelegate: AppDelegate {
         return UIApplication.shared.delegate as! AppDelegate
     }
@@ -18,6 +21,7 @@ extension UIViewController {
         return appDelegate.persistentContainer.viewContext
     }
     
+    //MARK: - METHODS
     func showError(text: String) {
         showError(text: text, campo: nil)
     }

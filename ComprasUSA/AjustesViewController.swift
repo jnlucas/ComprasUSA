@@ -18,19 +18,15 @@ class AjustesViewController: UIViewController {
 
     @IBOutlet weak var txtCotacao: UITextField!
     @IBOutlet weak var txtIOF: UITextField!
-    
     @IBOutlet weak var tableView: UITableView!
     
     var label = UILabel(frame: CGRect(x: 0, y: 0, width: 200, height: 22))
-    
     var fetchedResultController: NSFetchedResultsController<Estado>!
-    
     var dataSource: [Estado] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-    
         tableView.estimatedRowHeight = 106
         tableView.rowHeight = UITableViewAutomaticDimension
         label.text = "Lista de estados vazia!"
@@ -39,12 +35,13 @@ class AjustesViewController: UIViewController {
         
         tableView.delegate = self
         tableView.dataSource = self
-        
         loadEstados()
-        
-        
     }
 
+   
+    @IBAction func close(_ sender: Any) {
+        dismiss(animated: true, completion: nil)
+    }
     
     
 
@@ -173,7 +170,7 @@ extension AjustesViewController: UITableViewDelegate {
         }
         alert.addAction(UIAlertAction(title: title, style: .default, handler: { (action: UIAlertAction) in
             let estado = estado ?? Estado(context: self.context)
-            estado.imposto = Float((alert.textFields?[1].text?.replacingOccurrences(of: ",", with: "."))!)!
+            estado.imposto = Float(Double((alert.textFields?[1].text?.replacingOccurrences(of: ",", with: "."))!)!)
             estado.nome = alert.textFields?.first?.text
             do {
                 try self.context.save()
@@ -194,6 +191,9 @@ extension AjustesViewController: UITableViewDelegate {
         let alert = resp as! UIAlertController
         alert.actions[0].isEnabled = (alert.textFields?.first?.text != "" && alert.textFields?[1].text != "")
     }
+    
+    
+    
 }
 
 // MARK: - UITableViewDelegate
@@ -213,7 +213,6 @@ extension AjustesViewController: UITableViewDataSource {
         }
     }
     
-    //Método que define a célula que será apresentada em cada linha
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "estadoCell", for: indexPath) as! AjustesTableViewCell
         let estado = fetchedResultController.object(at: indexPath)

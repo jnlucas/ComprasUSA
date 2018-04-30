@@ -13,7 +13,6 @@ import CoreData
 class ComprasTableViewController: UITableViewController {
 
     
-    //var label = UILabel(frame: CGRect(x: 0, y: 0, width: 200, height: 22))
     var fetchedResultController: NSFetchedResultsController<Compra>!
     var label = UILabel(frame: CGRect(x: 0, y: 0, width: 200, height: 22))
     
@@ -33,19 +32,18 @@ class ComprasTableViewController: UITableViewController {
     
     
     
-    
-    func loadCompras() {
-        let fetchRequest: NSFetchRequest<Compra> = Compra.fetchRequest()
-        let sortDescriptor = NSSortDescriptor(key: "nome", ascending: true)
-        fetchRequest.sortDescriptors = [sortDescriptor]
-        fetchedResultController = NSFetchedResultsController(fetchRequest: fetchRequest, managedObjectContext: context, sectionNameKeyPath: nil, cacheName: nil)
-        fetchedResultController.delegate = self
-        do {
-            try fetchedResultController.performFetch()
-        } catch {
-            print(error.localizedDescription)
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        print("cliquei no elemento")
+        
+        if let vc = segue.destination as? CadastrarViewController {
+            if let index = tableView.indexPathForSelectedRow {
+                vc.compra = fetchedResultController.object(at: index)
+            }
         }
+        
     }
+    
     
     override func numberOfSections(in tableView: UITableView) -> Int {
         return 1
@@ -61,14 +59,14 @@ class ComprasTableViewController: UITableViewController {
         }
     }
     
-    //Método que define a célula que será apresentada em cada linha
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "compraCell", for: indexPath) as! ComprasTableViewCell
         let compra = fetchedResultController.object(at: indexPath)
         cell.lbNome.text = compra.nome
         cell.lbPreco.text = "\(compra.preco)"
         
-        print("preco >>>> \(compra.preco)")
+        
         if let image = compra.imagem as? UIImage {
             cell.ivImage.image = image
         } else {
@@ -78,6 +76,7 @@ class ComprasTableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+        
         if editingStyle == .delete {
             let compra = fetchedResultController.object(at: indexPath)
             context.delete(compra)
@@ -86,6 +85,20 @@ class ComprasTableViewController: UITableViewController {
             } catch {
                 print(error.localizedDescription)
             }
+        }
+    }
+    
+    //MARK: - METHODS
+    func loadCompras() {
+        let fetchRequest: NSFetchRequest<Compra> = Compra.fetchRequest()
+        let sortDescriptor = NSSortDescriptor(key: "nome", ascending: true)
+        fetchRequest.sortDescriptors = [sortDescriptor]
+        fetchedResultController = NSFetchedResultsController(fetchRequest: fetchRequest, managedObjectContext: context, sectionNameKeyPath: nil, cacheName: nil)
+        fetchedResultController.delegate = self
+        do {
+            try fetchedResultController.performFetch()
+        } catch {
+            print(error.localizedDescription)
         }
     }
     
