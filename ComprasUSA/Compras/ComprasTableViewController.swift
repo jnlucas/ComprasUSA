@@ -41,6 +41,9 @@ class ComprasTableViewController: UITableViewController {
     }
     
     
+    
+    
+    
     override func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
@@ -83,6 +86,8 @@ class ComprasTableViewController: UITableViewController {
             }
         }
     }
+    
+    
     
     //MARK: - METHODS
     func loadCompras() {
