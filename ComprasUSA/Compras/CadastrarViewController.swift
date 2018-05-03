@@ -177,6 +177,7 @@ class CadastrarViewController: UIViewController {
             
             
             dismiss(animated: true)
+            navigationController?.popViewController(animated: true)
         }
         
         
