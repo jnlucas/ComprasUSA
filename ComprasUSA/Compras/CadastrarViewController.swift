@@ -150,17 +150,25 @@ class CadastrarViewController: UIViewController {
     }
     
     @IBAction func cadastrar(_ sender: Any) {
-        
+        var atualizacao = true
         if compra == nil {
             compra = Compra(context: context)
+            atualizacao = false
         }
         
         
         if !validaCampo(campo: txtNomeProduto, nomeCampo: "Nome do Produto")
             || !validaCampo(campo: txtEstado, nomeCampo: "Estado da compra")
             || !validaCampo(campo: txtValor, nomeCampo: "Valor do Produto") {
+            
+            
+            if !atualizacao {
+                context.delete(compra)
+                compra = nil
+            }
             return
         }else{
+            
             compra.nome = txtNomeProduto.text!
             compra.preco = Double(txtValor.text!)!
             compra.cartao = swtCartao.isOn

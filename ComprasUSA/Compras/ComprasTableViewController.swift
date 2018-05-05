@@ -62,6 +62,8 @@ class ComprasTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "compraCell", for: indexPath) as! ComprasTableViewCell
         let compra = fetchedResultController.object(at: indexPath)
+        
+        
         cell.lbNome.text = compra.nome
         cell.lbPreco.text = "\(compra.preco)"
         
@@ -97,6 +99,7 @@ class ComprasTableViewController: UITableViewController {
         fetchedResultController = NSFetchedResultsController(fetchRequest: fetchRequest, managedObjectContext: context, sectionNameKeyPath: nil, cacheName: nil)
         fetchedResultController.delegate = self
         do {
+        
             try fetchedResultController.performFetch()
         } catch {
             print(error.localizedDescription)

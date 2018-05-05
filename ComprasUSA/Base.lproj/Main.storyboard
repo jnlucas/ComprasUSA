@@ -373,7 +373,7 @@
             </objects>
             <point key="canvasLocation" x="-1330.4000000000001" y="1233.7331334332835"/>
         </scene>
-        <!--Total View Controller-->
+        <!--Total da compra-->
         <scene sceneID="3gY-V1-Gu2">
             <objects>
                 <viewController id="Mbn-hG-hse" customClass="TotalViewController" customModule="ComprasUSA" customModuleProvider="target" sceneMemberID="viewController">
@@ -423,7 +423,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="PP1-6l-nIM"/>
                     </view>
-                    <navigationItem key="navigationItem" id="wZu-hb-XS2"/>
+                    <navigationItem key="navigationItem" title="Total da compra" id="wZu-hb-XS2"/>
                     <connections>
                         <outlet property="lbTotalDolar" destination="XZo-Rg-E5t" id="ll0-3y-X2c"/>
                         <outlet property="lbTotalReal" destination="m2P-ZG-idd" id="fLm-Iy-Pkg"/>
