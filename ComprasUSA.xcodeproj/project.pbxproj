@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		60110CB5209E2137007580C4 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 60110CB4209E2137007580C4 /* Settings.bundle */; };
 		6073F28E2094EB3100FB2793 /* ComprasTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6073F28D2094EB3100FB2793 /* ComprasTableViewController.swift */; };
 		6073F2912094F24500FB2793 /* AjustesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6073F2902094F24500FB2793 /* AjustesTableViewCell.swift */; };
 		6073F2932094FB4300FB2793 /* UIViewController+CoreData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6073F2922094FB4300FB2793 /* UIViewController+CoreData.swift */; };
@@ -23,6 +24,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		60110CB4209E2137007580C4 /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
 		6073F28D2094EB3100FB2793 /* ComprasTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComprasTableViewController.swift; sourceTree = "<group>"; };
 		6073F2902094F24500FB2793 /* AjustesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AjustesTableViewCell.swift; sourceTree = "<group>"; };
 		6073F2922094FB4300FB2793 /* UIViewController+CoreData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+CoreData.swift"; sourceTree = "<group>"; };
@@ -106,6 +108,7 @@
 				AC77F86F208E96F400A419D7 /* Assets.xcassets */,
 				AC77F871208E96F400A419D7 /* LaunchScreen.storyboard */,
 				AC77F874208E96F400A419D7 /* Info.plist */,
+				60110CB4209E2137007580C4 /* Settings.bundle */,
 				AC77F86C208E96F400A419D7 /* ComprasUSA.xcdatamodeld */,
 				6073F2922094FB4300FB2793 /* UIViewController+CoreData.swift */,
 			);
@@ -171,6 +174,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				60110CB5209E2137007580C4 /* Settings.bundle in Resources */,
 				AC77F873208E96F400A419D7 /* LaunchScreen.storyboard in Resources */,
 				AC77F870208E96F400A419D7 /* Assets.xcassets in Resources */,
 				AC77F86B208E96F400A419D7 /* Main.storyboard in Resources */,
