@@ -227,9 +227,7 @@
                     <navigationItem key="navigationItem" title="Compras" id="Fy7-NG-upX">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="G5q-Lc-VjI">
                             <connections>
-                                <segue destination="uHG-fp-Prw" kind="popoverPresentation" popoverAnchorBarButtonItem="G5q-Lc-VjI" id="gUh-6c-6Mc">
-                                    <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
-                                </segue>
+                                <segue destination="uHG-fp-Prw" kind="show" id="gUh-6c-6Mc"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
