@@ -47,5 +47,28 @@ extension UIViewController {
         }
         return true
     }
+    
+    func validaTipo(campo: UITextField, nomeCampo: String, tipo: String) -> Bool {
+        if (!validaCampo(campo:campo,nomeCampo:nomeCampo))
+        {
+            return false
+        }
+        
+        if tipo == "number"{
+            guard let valor = campo.text else {return false}
+            
+            if !valor.isnumberordouble{
+                showError(text: "Campo \(nomeCampo) esta com o tipo errado", campo: campo)
+                return false
+            }
+            
+        }
+        return true
+        
+    }
+    
+   
 }
-
+extension String  {
+    var isnumberordouble: Bool { return Int(self) != nil || Double(self) != nil }
+}

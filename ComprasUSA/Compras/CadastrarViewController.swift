@@ -159,7 +159,9 @@ class CadastrarViewController: UIViewController {
         
         if !validaCampo(campo: txtNomeProduto, nomeCampo: "Nome do Produto")
             || !validaCampo(campo: txtEstado, nomeCampo: "Estado da compra")
-            || !validaCampo(campo: txtValor, nomeCampo: "Valor do Produto") {
+            || !validaCampo(campo: txtValor, nomeCampo: "Valor do Produto")
+            || !validaTipo(campo: txtValor, nomeCampo: "Valor do Produto",tipo:"number")
+        {
             
             
             if !atualizacao {
